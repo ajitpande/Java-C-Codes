@@ -1,0 +1,98 @@
+Name:Ajit Pandey
+USC NetID:ajitpand
+CSCI 455 Fall 2019
+Lab 3
+
+Note: On-campus students can put their answers to the lab questions in this file, or in a text file created in another text editor, or use a piece of paper they can show to their lab TA.  DEN students will need to put their answers in this README, so they will get submitted.
+
+
+1.1 
+
+program calls for recordPurchase method from CashReg Class. 0.75 purchase price was passed through it. This method calculated the total purchase price by this formula:
+purchase = purchase + amount;
+
+purchase variable is initialized as zero by constructor CashReg.
+
+purchase = initial purchase + amount of purchase;
+purchase = 0+0.75 = 0.75
+
+And getTotal method from CashReg class was called upon which returns the value of purchase variable.
+
+Then second time above methods were called upon, 1.5 amount another purchase
+
+purchase=0.75+1.5 =2.25
+
+total becomes= 2.25
+
+then received payment method, adds up all the bills tendered by the customer by this formula:
+
+ payment = (number of dollars) + (number of quarters * 0.25) + (number of dimes * 0.1)
+            + (number of nickels * 0.05) + (number of pennies * 0.01);
+
+then giveChange method was called upon,
+
+change = payment – purchase;
+change = 2.5-2.25 = 0.25
+
+then purchase and payment are initialized to zero and change value is returned.
+
+1.2
+Rounding errors occur when an exact representation of a floating-point number is not possible. The problem arises because computers represent numbers in the binary number system.
+
+2.1
+After modifying the code (in ex2 folder) so that calculations are done in cents while values are passed/returned as double, I still received the rounding error when 4.35 is passed through recordPurchase method. my compiler was recording it as 434.999999...4 and returning as 0.6500000....4. I did not find rounding error for other values of purchases. When I used Math.round method on 4.35 purchase price in recordPurchase method, rounding error for 4.35 purchase price did not show up.
+ 
+
+3.1
+
+Starting from Work directory.
+
+ccc_v1_w_8d1bb_16892@runweb5:~$ mkdir ~/ex3
+
+ccc_v1_w_8d1bb_16892@runweb5:~$ ls                                                                                                                                                                                                 
+CashReg.class  CashReg.java  CashRegTester.class  CashRegTester.java  ex1.out  ex2  ex3  ex4  README 
+
+ccc_v1_w_8d1bb_16892@runweb5:~$ cp ~/ex2/*.java ~/ex3                                                                                                                                                                              
+ccc_v1_w_8d1bb_16892@runweb5:~$ cd ex3                                                                                                                                                                                             
+ccc_v1_w_8d1bb_16892@runweb5:~/ex3$ ls                                                                                                                                                                                             
+CashReg.java  CashRegTester.java                                                                                                                                                                                                   
+
+4.1
+I implemented two new methods in CashReg class as given in exercise 4, receivePayment(Change money) and Change giveChange(). Replaced the existing methods which were passing variables. After change, here is the result of two tester classes:
+
+ccc_v1_w_8d1bb_16892@runweb11:~/ex4$ javac *.java                                                                                                                                                                  
+ccc_v1_w_8d1bb_16892@runweb11:~/ex4$ java ChangeTester                                                                                                                                                             
+Total value[exp 0] = 0                                                                                                                                                                                             
+Change[dollars=0,quarters=0,dimes=0,nickels=0,pennies=0]                                                                                                                                                           
+Total value[exp 354] = 354                                                                                                                                                                                         
+Change[dollars=3,quarters=0,dimes=1,nickels=7,pennies=9]                                                                                                                                                           
+ccc_v1_w_8d1bb_16892@runweb11:~/ex4$ java CashRegTester4                                                                                                                                                           
+Total: 4.35                                                                                                                                                                                                        
+Expected: 4.35                                                                                                                                                                                                     
+                                                                                                                                                                                                                   
+Payment given: Change[dollars=5,quarters=0,dimes=0,nickels=0,pennies=0]                                                                                                                                            
+Give change: Change[dollars=0,quarters=2,dimes=1,nickels=1,pennies=0]                                                                                                                                              
+Change total: 0.65                                                                                                                                                                                                 
+Expected: 0.65                                                                                                                                                                                                     
+                                                                                                                                                                                                                   
+Total: 0.75                                                                                                                                                                                                        
+Expected: 0.75                                                                                                                                                                                                     
+                                                                                                                                                                                                                   
+Total: 2.25                                                                                                                                                                                                        
+Expected: 2.25                                                                                                                                                                                                     
+                                                                                                                                                                                                                   
+Payment given: Change[dollars=2,quarters=0,dimes=5,nickels=0,pennies=0]                                                                                                                                            
+Give change: Change[dollars=0,quarters=1,dimes=0,nickels=0,pennies=0]                                                                                                                                              
+Change total: 0.25                                                                                                                                                                                                 
+Expected: 0.25                                                                                                                                                                                                     
+                                                                                                                                                                                                                   
+Total: 2.25                                                                                                                                                                                                        
+Expected: 2.25                                                                                                                                                                                                     
+                                                                                                                                                                                                                   
+Total: 21.5                                                                                                                                                                                                        
+Expected: 21.5                                                                                                                                                                                                     
+                                                                                                                                                                                                                   
+Payment given: Change[dollars=23,quarters=2,dimes=0,nickels=0,pennies=0]                                                                                                                                           
+Give change: Change[dollars=2,quarters=0,dimes=0,nickels=0,pennies=0]                                                                                                                                              
+Change total: 2.0                                                                                                                                                                                                  
+                  
