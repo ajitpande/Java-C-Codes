@@ -1,0 +1,33 @@
+Q1: It requires Comparator to compare the entry and then print.
+
+Q2.1: See the output files: poe.out and melville.out
+
+Q2.2: bartleby in Melville.txt -  due to the main character in essay.
+amontillado in poe.txt - due to the main subject of the essay.
+
+Q2.3: Both are same. See output in poe.out and poe_hashmap.out; melville.out and melville_hashmap.out
+
+Q3.1: because it directly calling for interface for impementation. It does not require object variable.
+
+Q3.2: I added an additional code in ConcordDriver3.java to filter word contains "-".
+
+public boolean predicate(Map.Entry<String,Integer> item){
+
+		if(item.getKey().length() >= number && !(item.getKey().contains("-"))){
+        return true;
+		}
+
+       return false;
+
+	   }
+   
+This brought follwing words as longest in files:
+   
+poe.txt: connoisseurship 1  (word length 15)
+   
+melville.txt: (word length 16)
+
+   obstreperousness 1       
+   unreasonableness 1
+
+

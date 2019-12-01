@@ -1,0 +1,71 @@
+Name: Ajit Pandey
+USC NetID: ajitpand
+CS 455 PA4
+Fall 2019
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people, except for the the resources explicitly mentioned in the CS 455
+Course Syllabus.  And I did not share my solution or parts of it with
+other students in the course."
+
+Initial below to "sign" the above statement:
+
+Ajit Pandey
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+NA
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+In case of lower case dictionary, if word is typed one uppercase and rest lower case, program runs.
+In case of uppercase dictionary, when lower case and uppercase both letters are entered on cosole, program finds related words sometimes. Sometimes it does not find.
+
+
+
+
+----------------------------------------------
+DESCRIPTION OF YOUR CLASS DESIGN AND ALGORITHMS AND DATA STRUCTURES USED:
+
+RACK: This class is for developing a Rack of Scrabble tiles.Constructor accepts the String and includes GetScrabble(...), printScrabble(..) and allSubsets(..) methods. It also compares the scores and words to assure that they are printed in decreasing order of individual scores.
+Instance Variables and Type:
+Map<Character,Integer> rack -              to store Rack as a Map
+Map<String,Integer> rackList - this stores the unique character and their respective character's frequency
+String rackWord -              Rack word entered on console. This allows to rack the original word typed on Rack at console.
+int[] numOfTimes-              to store frequency of number of words in a rack word
+
+
+
+AnagramDictionary:A dictionary of all anagram sets. Note: the processing is case-sensitive; so if the dictionary has all lower case words, you will likely want any string you test to have all lower case letters too, and likewise if the dictionary words are all upper case.
+Instance Variables and Type:
+Map<String, ArrayList<String>> anagramWord - variable for AnagramDictionary
+
+
+ScoreTable:this class evaluates the individual scorers of scrabble word. It is called upon in getScrabble method in Rack class.
+Instance Variable and Type:
+final int[] scoreAllLetters- array for individual letter score,
+   
+WordFinder: This class include main method. When user types ".", it quits the program. Otherwise, it keeps making loop for new Rack and prints all related word. This class creates an instance of AnagramDictionary class which runs AngramDictionary and getAnagramOf methods to find related anagrams for Rack word.Then it initiates an instance of Rack class which facilitates printing of related words and its respective scrabble scores.
+
+
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
+NA
+
+
+
+
+
+
