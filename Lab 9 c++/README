@@ -1,9 +1,0 @@
-
-
-1. The initial value of k was incorrect. and k was not incremented inside while loop.
-
-2. the assignment p->next = p; was wrong it should be p = p->next;
-
-3. the assignment p = new Node(item); was wrong. This needs to point to end to assign new item. It shoould be p->next = new Node(item);
-
-4. added if statement to point to skip every other item: list = list->next->next;
